@@ -14,5 +14,13 @@ dependencyResolutionManagement {
 }
 
 rootProject.name = "LazaKMM"
+
 include(":androidApp")
-include(":shared")
+
+include(":common:core")
+include(":common:auth:data")
+include(":common:auth:domain")
+include(":common:auth:presentation")
+
+include(":common:umbrella-android")
+include(":common:umbrella-ios")
