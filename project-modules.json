@@ -1,0 +1,32 @@
+[
+  {
+    "module": ":androidApp",
+    "alias": "androidApp",
+    "path": "androidApp"
+  },
+  {
+    "module": ":common:core",
+    "alias": "commonCore",
+    "path": "common/core"
+  },
+  {
+    "module": ":common:umbrella-android",
+    "alias": "umbrellaAndroid",
+    "path": "common/umbrella-android"
+  },
+  {
+    "module": ":data:product-data",
+    "alias": "productData",
+    "path": "data/product-data"
+  },
+  {
+    "module": ":domain:product-domain",
+    "alias": "productDomain",
+    "path": "domain/product-domain"
+  },
+  {
+    "module": ":feature:product-feature",
+    "alias": "productFeature",
+    "path": "feature/product-feature"
+  }
+]
