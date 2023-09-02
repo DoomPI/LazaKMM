@@ -1,5 +1,11 @@
 object ProjectModules {
 
+    object Base {
+        private const val base = ":base"
+        const val uikit = "$base:uikit"
+        const val divkit = "$base:divkit"
+    }
+
     object Common {
         private const val common = ":common"
         const val core = "$common:core"

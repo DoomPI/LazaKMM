@@ -1,9 +1,9 @@
 import ru.pyroman.laza.common.core.di.Inject
 import org.kodein.di.DI
-import org.kodein.di.bind
 import org.kodein.di.direct
-import org.kodein.di.singleton
 import ru.pyroman.laza.common.core.coreModule
+import ru.pyroman.laza.common.core.di.module
+import ru.pyroman.laza.common.core.di.singleton
 import ru.pyroman.laza.common.core.platform.PlatformConfiguration
 import ru.pyroman.laza.data.product.productDataModule
 import ru.pyroman.laza.domain.product.productDomainModule
@@ -13,8 +13,8 @@ object PlatformSDK {
     fun init(
         configuration: PlatformConfiguration
     ) {
-        val platformModule = DI.Module("ru/pyroman/laza/common/core/platform") {
-            bind<PlatformConfiguration>() with singleton { configuration }
+        val platformModule = module("ru/pyroman/laza/common/core/platform") {
+            singleton { configuration }
         }
 
         Inject.createDependencies(

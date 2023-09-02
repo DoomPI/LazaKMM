@@ -5,11 +5,11 @@ import io.ktor.client.call.body
 import io.ktor.client.request.*
 import io.ktor.http.*
 
-class ProductNetworkDataSourceKtor(
+internal class ProductNetworkDataSourceKtor(
     private val httpClient: HttpClient,
-) {
+) : ProductNetworkDataSource {
 
-    suspend fun getProductScreen(): String {
+    override suspend fun getProductScreen(): String {
         return httpClient.get {
             url {
                 protocol = URLProtocol.HTTP

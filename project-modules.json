@@ -10,6 +10,16 @@
     "path": "common/core"
   },
   {
+    "module": ":base:divkit",
+    "alias": "baseDivkit",
+    "path": "base/divkit"
+  },
+  {
+    "module": ":base:uikit",
+    "alias": "baseUikit",
+    "path": "base/uikit"
+  },
+  {
     "module": ":common:umbrella-android",
     "alias": "umbrellaAndroid",
     "path": "common/umbrella-android"

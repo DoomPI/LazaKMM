@@ -1,19 +1,23 @@
 package ru.pyroman.laza.data.product
 
+import org.kodein.di.instance
+import ru.pyroman.laza.common.core.di.module
+import ru.pyroman.laza.common.core.di.provider
+import ru.pyroman.laza.common.core.di.singleton
 import ru.pyroman.laza.data.product.datasource.network.ProductNetworkDataSourceKtor
-import org.kodein.di.*
+import ru.pyroman.laza.data.product.datasource.network.ProductNetworkDataSource
 import ru.pyroman.laza.domain.product.repository.ProductScreenRepository
 import ru.pyroman.laza.data.product.repository.ProductScreenRepositoryImpl
 
-val productDataModule = DI.Module("productDataModule") {
+val productDataModule = module("productDataModule") {
 
-    bind<ProductNetworkDataSourceKtor>() with provider {
+    singleton<ProductNetworkDataSource> {
         ProductNetworkDataSourceKtor(
             httpClient = instance(),
         )
     }
 
-    bind<ProductScreenRepository>() with singleton {
+    provider<ProductScreenRepository> {
         ProductScreenRepositoryImpl(
             networkDataSource = instance(),
         )

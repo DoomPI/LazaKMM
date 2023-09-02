@@ -2,9 +2,9 @@ package ru.pyroman.laza.common.core
 
 import ru.pyroman.laza.common.core.json.serializationModule
 import ru.pyroman.laza.common.core.ktor.ktorModule
-import org.kodein.di.DI
+import ru.pyroman.laza.common.core.di.module
 
-val coreModule = DI.Module("coreModule") {
+val coreModule = module("coreModule") {
     importAll(
         serializationModule,
         ktorModule,

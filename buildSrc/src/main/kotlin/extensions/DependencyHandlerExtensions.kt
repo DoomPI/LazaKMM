@@ -6,6 +6,15 @@ fun KotlinDependencyHandler.useModule(moduleNotation: String) {
     implementation(project(moduleNotation))
 }
 
+fun KotlinDependencyHandler.shareModule(moduleNotation: String) {
+    api(project(moduleNotation))
+}
+
+fun KotlinDependencyHandler.useBaseUIAndroidLibraries() {
+    implementation(Dependencies.Android.AndroidX.AppCompat.appCompat)
+    implementation(Dependencies.Glide.glide)
+}
+
 fun DependencyHandler.useCommonAndroidPresentationLibraries() {
     add(IMPLEMENTATION, Dependencies.Android.AndroidX.AppCompat.appCompat)
     add(IMPLEMENTATION, Dependencies.Glide.glide)

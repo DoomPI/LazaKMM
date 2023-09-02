@@ -6,12 +6,12 @@ import io.ktor.client.plugins.contentnegotiation.*
 import io.ktor.client.plugins.logging.*
 import io.ktor.serialization.kotlinx.json.*
 import kotlinx.serialization.json.Json
-import org.kodein.di.DI
-import org.kodein.di.bind
-import org.kodein.di.singleton
+import ru.pyroman.laza.common.core.di.module
+import ru.pyroman.laza.common.core.di.singleton
 
-internal val ktorModule = DI.Module("ktorModule") {
-    bind<HttpClient>() with singleton {
+internal val ktorModule = module("ktorModule") {
+
+    singleton<HttpClient> {
         HttpClient(HttpEngineFactory().createEngine()) {
             install(Logging) {
                 logger = Logger.SIMPLE
