@@ -9,6 +9,8 @@ kotlin {
             dependencies {
                 useModule(ProjectModules.Common.core)
 
+                useModule(ProjectModules.Base.divkit)
+
                 useModule(ProjectModules.Data.product)
 
                 useModule(ProjectModules.Domain.product)

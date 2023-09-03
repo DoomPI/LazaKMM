@@ -6,11 +6,12 @@ import com.yandex.div.core.Div2Context
 import ru.pyroman.laza.base.uikit.R
 import ru.pyroman.laza.base.divkit.configuration.DivConfigurationFactory
 
-internal class DivContextFactory(
+internal class DivContextProvider(
     private val divConfigurationFactory: DivConfigurationFactory,
+    private val context: Context,
 ) {
 
-    fun create(context: Context): Div2Context {
+    fun provide(): Div2Context {
         val configuration = divConfigurationFactory.create(context)
         val themeResId = R.style.BaseAppTheme
 
