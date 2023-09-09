@@ -9,7 +9,7 @@ kotlin {
             dependencies {
                 useModule(ProjectModules.Common.core)
 
-                useModule(ProjectModules.Base.divkit)
+                useModule(ProjectModules.Base.Divkit.ui)
 
                 useModule(ProjectModules.Data.product)
 

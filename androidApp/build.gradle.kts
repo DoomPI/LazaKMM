@@ -30,7 +30,8 @@ dependencies {
     useModule(ProjectModules.Common.core)
     useModule(ProjectModules.Common.umbrellaAndroid)
 
-    useModule(ProjectModules.Base.divkit)
+    useModule(ProjectModules.Base.Divkit.ui)
+    useModule(ProjectModules.Base.Divkit.domain)
 
     useModule(ProjectModules.Domain.product)
 }

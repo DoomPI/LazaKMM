@@ -10,14 +10,19 @@
     "path": "common/core"
   },
   {
-    "module": ":base:divkit",
-    "alias": "baseDivkit",
-    "path": "base/divkit"
+    "module": ":base:divkit:ui",
+    "alias": "baseDivkitUi",
+    "path": "base/divkit/ui"
   },
   {
-    "module": ":base:uikit",
-    "alias": "baseUikit",
-    "path": "base/uikit"
+    "module": ":base:divkit:data",
+    "alias": "baseDivkitData",
+    "path": "base/divkit/data"
+  },
+  {
+    "module": ":base:divkit:domain",
+    "alias": "baseDivkitDomain",
+    "path": "base/divkit/domain"
   },
   {
     "module": ":common:umbrella-android",

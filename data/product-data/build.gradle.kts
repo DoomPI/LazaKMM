@@ -1,16 +1,15 @@
 plugins {
     `multiplatform-setup`
     `android-setup`
-    kotlinSerialization
 }
 
 kotlin {
     sourceSets {
         commonMain {
             dependencies {
-
-                useCommonDataLibraries()
                 useModule(ProjectModules.Common.core)
+                useModule(ProjectModules.Base.Divkit.domain)
+                useModule(ProjectModules.Base.Divkit.data)
                 useModule(ProjectModules.Domain.product)
             }
         }

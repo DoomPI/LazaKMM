@@ -9,6 +9,7 @@ kotlin {
             dependencies {
                 useCommonDomainLibraries()
                 useModule(ProjectModules.Common.core)
+                useModule(ProjectModules.Base.Divkit.domain)
             }
         }
     }

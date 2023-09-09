@@ -11,7 +11,7 @@ import ru.pyroman.laza.common.core.di.singleton
 
 internal val ktorModule = module("ktorModule") {
 
-    singleton<HttpClient> {
+    singleton {
         HttpClient(HttpEngineFactory().createEngine()) {
             install(Logging) {
                 logger = Logger.SIMPLE

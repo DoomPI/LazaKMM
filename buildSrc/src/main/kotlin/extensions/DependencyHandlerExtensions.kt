@@ -29,9 +29,7 @@ fun KotlinDependencyHandler.useCommonDomainLibraries() {
 }
 
 fun KotlinDependencyHandler.useCommonDataLibraries() {
-    implementation(Dependencies.DivKit.data)
-    implementation(Dependencies.DivKit.core)
-    implementation(Dependencies.DivKit.json)
+
 }
 
 fun DependencyHandler.useModule(moduleNotation: String) {
