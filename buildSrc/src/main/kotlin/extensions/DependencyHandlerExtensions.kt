@@ -17,6 +17,7 @@ fun KotlinDependencyHandler.useBaseUIAndroidLibraries() {
 
 fun DependencyHandler.useCommonAndroidPresentationLibraries() {
     add(IMPLEMENTATION, Dependencies.Android.AndroidX.AppCompat.appCompat)
+    add(IMPLEMENTATION, Dependencies.Android.AndroidX.Fragment.fragmentKtx)
     add(IMPLEMENTATION, Dependencies.Glide.glide)
 }
 

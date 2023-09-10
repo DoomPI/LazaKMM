@@ -61,6 +61,11 @@ object Dependencies {
                 private const val version = "1.6.1"
                 const val appCompat = "androidx.appcompat:appcompat:$version"
             }
+
+            object Fragment {
+                private const val version = "1.5.7"
+                const val fragmentKtx = "androidx.fragment:fragment-ktx:$version"
+            }
         }
     }
 }

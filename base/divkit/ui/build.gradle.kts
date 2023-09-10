@@ -21,6 +21,7 @@ kotlin {
             dependencies {
                 useModule(ProjectModules.Common.core)
                 useModule(ProjectModules.Base.Divkit.domain)
+                useModule(ProjectModules.Base.Uikit.uikit)
             }
         }
     }

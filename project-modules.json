@@ -25,6 +25,11 @@
     "path": "base/divkit/domain"
   },
   {
+    "module": ":base:uikit",
+    "alias": "baseUikit",
+    "path": "base/uikit"
+  },
+  {
     "module": ":common:umbrella-android",
     "alias": "umbrellaAndroid",
     "path": "common/umbrella-android"

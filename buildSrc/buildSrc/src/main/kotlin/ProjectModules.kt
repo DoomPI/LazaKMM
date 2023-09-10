@@ -9,6 +9,10 @@ object ProjectModules {
             const val data = "$divkit:data"
             const val domain = "$divkit:domain"
         }
+
+        object Uikit {
+            const val uikit = "$base:uikit"
+        }
     }
 
     object Common {
