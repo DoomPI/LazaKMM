@@ -1,8 +1,6 @@
 package ru.pyroman.laza.base.uikit.mvp
 
-import kotlin.reflect.KProperty
-
-class MvpDelegate<in View : MvpView, out Presenter : MvpPresenter<*>>(
+class MvpDelegate<View : MvpView, Presenter : MvpPresenter<View>>(
     private val presenterProvider: () -> Presenter
 ) {
 
@@ -32,16 +30,4 @@ class MvpDelegate<in View : MvpView, out Presenter : MvpPresenter<*>>(
     fun onDestroy() {
         presenter = null
     }
-
-    operator fun getValue(thisRef: Any?, property: KProperty<*>): Presenter {
-        return presenter ?: throw IllegalStateException(
-            "Presenter has to be initialized in onCreate()"
-        )
-    }
-}
-
-inline fun <View : MvpView, Presenter : MvpPresenter<View>> mvpDelegate(
-    noinline provider: () -> Presenter,
-): MvpDelegate<View, Presenter> {
-    return MvpDelegate(provider)
 }

@@ -2,15 +2,17 @@ package ru.pyroman.laza.base.uikit
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
+import ru.pyroman.laza.base.uikit.mvp.MvpDelegate
 import ru.pyroman.laza.base.uikit.mvp.MvpPresenter
 import ru.pyroman.laza.base.uikit.mvp.MvpView
-import ru.pyroman.laza.base.uikit.mvp.mvpDelegate
 
-abstract class MvpFragment : Fragment(), MvpView {
+abstract class MvpFragment<View : MvpView> : Fragment() {
 
-    abstract fun providePresenter(): MvpPresenter<MvpView>
+    protected abstract val view: View
 
-    private val mvpDelegate = mvpDelegate { providePresenter() }
+    protected abstract fun providePresenter(): MvpPresenter<View>
+
+    protected abstract val mvpDelegate: MvpDelegate<View, MvpPresenter<View>>
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -19,12 +21,12 @@ abstract class MvpFragment : Fragment(), MvpView {
 
     override fun onStart() {
         super.onStart()
-        mvpDelegate.onAttach(this)
+        mvpDelegate.onAttach(view)
     }
 
     override fun onResume() {
         super.onResume()
-        mvpDelegate.onAttach(this)
+        mvpDelegate.onAttach(view)
     }
 
     override fun onStop() {

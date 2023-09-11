@@ -2,7 +2,7 @@ package ru.pyroman.laza.base.uikit.mvp
 
 import ru.pyroman.laza.common.core.utils.ref.WeakReference
 
-open class MvpPresenter<out View : MvpView> {
+open class MvpPresenter<View : MvpView> {
 
     protected val view: View?
         get() = _view?.get()
@@ -14,7 +14,7 @@ open class MvpPresenter<out View : MvpView> {
 
     }
 
-    open fun attachView(view: @UnsafeVariance View) {
+    open fun attachView(view: View) {
         this._view = WeakReference(view)
 
         if (isFirstLaunch) {

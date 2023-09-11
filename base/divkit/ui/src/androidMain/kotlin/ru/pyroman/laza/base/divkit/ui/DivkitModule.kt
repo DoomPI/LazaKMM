@@ -1,6 +1,8 @@
 package ru.pyroman.laza.base.divkit.ui
 
 import org.kodein.di.instance
+import ru.pyroman.laza.base.divkit.data.divkitDataModule
+import ru.pyroman.laza.base.divkit.domain.divkitDomainModule
 import ru.pyroman.laza.common.core.di.provider
 import ru.pyroman.laza.common.core.di.singleton
 import ru.pyroman.laza.base.divkit.ui.configuration.DivConfigurationFactory
@@ -14,7 +16,9 @@ import ru.pyroman.laza.common.core.platform.PlatformConfiguration
 
 actual val divkitModule = module("divkitModule") {
     importAll(
-        divkitCommonModule
+        divkitCommonModule,
+        divkitDomainModule,
+        divkitDataModule,
     )
 
     provider<DivImageLoaderFactory> {

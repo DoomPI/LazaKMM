@@ -1,9 +1,8 @@
 package ru.pyroman.laza.feature.product.presenter
 
 import ru.pyroman.laza.base.divkit.ui.presenter.BaseDivkitPresenter
-import ru.pyroman.laza.feature.product.view.ProductView
 
-class ProductPresenter : BaseDivkitPresenter<ProductView>() {
+class ProductPresenter : BaseDivkitPresenter() {
     override val screenPath: String
         get() = "product"
 }

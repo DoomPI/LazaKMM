@@ -32,6 +32,9 @@ dependencies {
 
     useModule(ProjectModules.Base.Divkit.ui)
     useModule(ProjectModules.Base.Divkit.domain)
+    useModule(ProjectModules.Base.Uikit.uikit)
 
     useModule(ProjectModules.Domain.product)
+
+    useModule(ProjectModules.Feature.product)
 }
