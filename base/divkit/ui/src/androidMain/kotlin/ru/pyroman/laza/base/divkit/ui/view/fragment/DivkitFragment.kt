@@ -11,7 +11,6 @@ import ru.pyroman.laza.base.divkit.ui.presenter.BaseDivkitPresenter
 import ru.pyroman.laza.base.divkit.ui.view.DivkitMvpView
 import ru.pyroman.laza.base.uikit.MvpFragment
 import ru.pyroman.laza.base.uikit.mvp.MvpDelegate
-import ru.pyroman.laza.base.uikit.mvp.MvpPresenter
 import ru.pyroman.laza.common.core.di.Inject.instance
 
 abstract class DivkitFragment : MvpFragment<DivkitMvpView>(), DivkitMvpView {
@@ -20,7 +19,7 @@ abstract class DivkitFragment : MvpFragment<DivkitMvpView>(), DivkitMvpView {
 
     abstract override fun providePresenter(): BaseDivkitPresenter
 
-    override val mvpDelegate = MvpDelegate<DivkitMvpView, MvpPresenter<DivkitMvpView>>(
+    override val mvpDelegate = MvpDelegate(
         presenterProvider = ::providePresenter
     )
 

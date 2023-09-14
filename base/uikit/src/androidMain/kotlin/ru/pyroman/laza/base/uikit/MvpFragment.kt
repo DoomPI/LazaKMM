@@ -12,7 +12,7 @@ abstract class MvpFragment<View : MvpView> : Fragment() {
 
     protected abstract fun providePresenter(): MvpPresenter<View>
 
-    protected abstract val mvpDelegate: MvpDelegate<View, MvpPresenter<View>>
+    protected abstract val mvpDelegate: MvpDelegate<View>
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

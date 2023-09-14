@@ -1,10 +1,10 @@
 package ru.pyroman.laza.base.uikit.mvp
 
-class MvpDelegate<View : MvpView, Presenter : MvpPresenter<View>>(
-    private val presenterProvider: () -> Presenter
+class MvpDelegate<View : MvpView>(
+    private val presenterProvider: () -> MvpPresenter<View>
 ) {
 
-    private var presenter: Presenter? = null
+    private var presenter: MvpPresenter<View>? = null
     private var isAttached: Boolean = false
 
     fun onCreate() {
