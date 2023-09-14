@@ -16,6 +16,8 @@ import ru.pyroman.laza.common.core.di.Inject.instance
 
 abstract class DivkitFragment : MvpFragment<DivkitMvpView>(), DivkitMvpView {
 
+    override fun provideView(): DivkitMvpView = this
+
     abstract override fun providePresenter(): BaseDivkitPresenter
 
     override val mvpDelegate = MvpDelegate<DivkitMvpView, MvpPresenter<DivkitMvpView>>(

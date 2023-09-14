@@ -8,7 +8,7 @@ import ru.pyroman.laza.base.uikit.mvp.MvpView
 
 abstract class MvpFragment<View : MvpView> : Fragment() {
 
-    protected abstract val view: View
+    protected abstract fun provideView(): View
 
     protected abstract fun providePresenter(): MvpPresenter<View>
 
@@ -21,12 +21,7 @@ abstract class MvpFragment<View : MvpView> : Fragment() {
 
     override fun onStart() {
         super.onStart()
-        mvpDelegate.onAttach(view)
-    }
-
-    override fun onResume() {
-        super.onResume()
-        mvpDelegate.onAttach(view)
+        mvpDelegate.onAttach(provideView())
     }
 
     override fun onStop() {

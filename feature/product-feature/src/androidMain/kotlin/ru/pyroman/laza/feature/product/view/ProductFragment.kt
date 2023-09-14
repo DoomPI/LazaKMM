@@ -6,8 +6,6 @@ import ru.pyroman.laza.feature.product.presenter.ProductPresenter
 
 class ProductFragment : DivkitFragment() {
 
-    override val view = this
-
     override fun providePresenter(): BaseDivkitPresenter {
         return ProductPresenter()
     }
