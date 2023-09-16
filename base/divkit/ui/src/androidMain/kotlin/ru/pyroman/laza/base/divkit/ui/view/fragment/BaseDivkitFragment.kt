@@ -45,11 +45,10 @@ abstract class BaseDivkitFragment : MvpFragment(), DivkitMvpView {
 
     override fun showScreen(screenData: ScreenData) {
         val divView = divViewFactory.create(screenData)
-        divView?.let { view ->
-            with(binding) {
-                rootView.removeAllViews()
-                rootView.addView(view)
-            }
+
+        with(binding) {
+            rootView.removeAllViews()
+            rootView.addView(divView)
         }
     }
 

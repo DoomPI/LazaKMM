@@ -10,13 +10,11 @@ internal class DivViewFactoryImpl(
     private val context: Div2Context,
 ) : DivViewFactory {
 
-    override fun create(screenData: ScreenData): View? {
+    override fun create(screenData: ScreenData): View {
         val divData = screenData.divData
 
-        return divData?.let { data ->
-            Div2View(context).apply {
-                setData(data, DivDataTag(data.logId))
-            }
+        return Div2View(context).apply {
+            setData(divData, DivDataTag(divData.logId))
         }
     }
 }

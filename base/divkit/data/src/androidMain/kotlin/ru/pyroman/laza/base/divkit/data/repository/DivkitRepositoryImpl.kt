@@ -21,13 +21,11 @@ internal actual class DivkitRepositoryImpl(
         )
     }
 
-    private fun getDivData(jsonObject: JSONObject): DivData? {
+    private fun getDivData(jsonObject: JSONObject): DivData {
         val divan = with(jsonObject) {
-            optJSONObject("divan")
+            getJSONObject("divan")
         }
 
-        return divan?.let {
-            parser.parse(divan)
-        }
+        return parser.parse(divan)
     }
 }
