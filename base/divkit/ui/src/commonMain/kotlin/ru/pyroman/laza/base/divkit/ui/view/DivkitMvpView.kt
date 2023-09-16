@@ -10,4 +10,6 @@ interface DivkitMvpView : MvpView {
     fun showLoading()
 
     fun showError()
+
+    fun showNetworkError()
 }

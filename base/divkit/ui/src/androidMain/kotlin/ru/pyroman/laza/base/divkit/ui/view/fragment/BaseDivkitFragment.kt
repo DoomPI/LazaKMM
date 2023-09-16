@@ -59,4 +59,8 @@ abstract class BaseDivkitFragment : MvpFragment(), DivkitMvpView {
     override fun showError() {
 
     }
+
+    override fun showNetworkError() {
+
+    }
 }
