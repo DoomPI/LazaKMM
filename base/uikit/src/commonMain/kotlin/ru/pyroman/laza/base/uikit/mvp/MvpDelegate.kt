@@ -1,9 +1,11 @@
 package ru.pyroman.laza.base.uikit.mvp
 
 class MvpDelegate<View : MvpView>(
-    private val presenterProvider: () -> MvpPresenter<View>
+    view: View,
+    private val presenterProvider: () -> MvpPresenter<View>,
 ) {
 
+    private var view: View? = view
     private var presenter: MvpPresenter<View>? = null
     private var isAttached: Boolean = false
 
@@ -13,15 +15,18 @@ class MvpDelegate<View : MvpView>(
         }
     }
 
-    fun onAttach(view: View) {
+    fun onAttach() {
         if (!isAttached) {
-            presenter?.attachView(view)
-            isAttached = true
+            view?.let {
+                presenter?.attachView(it)
+                isAttached = true
+            }
         }
     }
 
     fun onDetach() {
         if (isAttached) {
+            view = null
             presenter?.detachView()
             isAttached = false
         }

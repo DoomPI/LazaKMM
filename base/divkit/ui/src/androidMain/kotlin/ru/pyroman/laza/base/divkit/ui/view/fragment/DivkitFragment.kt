@@ -9,17 +9,17 @@ import ru.pyroman.laza.base.divkit.ui.databinding.FragmentDivkitBinding
 import ru.pyroman.laza.base.divkit.ui.divview.DivViewFactory
 import ru.pyroman.laza.base.divkit.ui.presenter.BaseDivkitPresenter
 import ru.pyroman.laza.base.divkit.ui.view.DivkitMvpView
-import ru.pyroman.laza.base.uikit.MvpFragment
 import ru.pyroman.laza.base.uikit.mvp.MvpDelegate
+import ru.pyroman.laza.base.uikit.mvp.MvpFragment
 import ru.pyroman.laza.common.core.di.Inject.instance
 
-abstract class DivkitFragment : MvpFragment<DivkitMvpView>(), DivkitMvpView {
+abstract class DivkitFragment : MvpFragment(), DivkitMvpView {
 
-    override fun provideView(): DivkitMvpView = this
+    abstract fun providePresenter(): BaseDivkitPresenter
 
-    abstract override fun providePresenter(): BaseDivkitPresenter
-
+    @Suppress("LeakingThis")
     override val mvpDelegate = MvpDelegate(
+        view = this,
         presenterProvider = ::providePresenter
     )
 

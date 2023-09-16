@@ -25,14 +25,4 @@ object ProjectModules {
         private const val feature = ":feature"
         const val product = "$feature:product-feature"
     }
-
-    object Domain {
-        private const val domain = ":domain"
-        const val product = "$domain:product-domain"
-    }
-
-    object Data {
-        private const val data = ":data"
-        const val product = "$data:product-data"
-    }
 }

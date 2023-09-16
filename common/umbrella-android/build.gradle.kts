@@ -11,10 +11,6 @@ kotlin {
 
                 useModule(ProjectModules.Base.Divkit.ui)
 
-                useModule(ProjectModules.Data.product)
-
-                useModule(ProjectModules.Domain.product)
-
                 useModule(ProjectModules.Feature.product)
             }
         }
