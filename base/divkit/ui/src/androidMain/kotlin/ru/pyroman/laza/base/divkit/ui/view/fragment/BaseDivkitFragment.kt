@@ -13,7 +13,7 @@ import ru.pyroman.laza.base.uikit.mvp.MvpDelegate
 import ru.pyroman.laza.base.uikit.mvp.MvpFragment
 import ru.pyroman.laza.common.core.di.Inject.instance
 
-abstract class DivkitFragment : MvpFragment(), DivkitMvpView {
+abstract class BaseDivkitFragment : MvpFragment(), DivkitMvpView {
 
     abstract fun providePresenter(): BaseDivkitPresenter
 
