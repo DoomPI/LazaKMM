@@ -34,5 +34,6 @@ dependencies {
     useModule(ProjectModules.Base.Divkit.domain)
     useModule(ProjectModules.Base.Uikit.uikit)
 
+    useModule(ProjectModules.Feature.auth)
     useModule(ProjectModules.Feature.product)
 }

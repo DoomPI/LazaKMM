@@ -6,6 +6,7 @@ import ru.pyroman.laza.common.core.coreModule
 import ru.pyroman.laza.common.core.di.module
 import ru.pyroman.laza.common.core.di.singleton
 import ru.pyroman.laza.common.core.platform.PlatformConfiguration
+import ru.pyroman.laza.feature.auth.authFeatureModule
 import ru.pyroman.laza.feature.product.productFeatureModule
 
 object PlatformSDK {
@@ -23,6 +24,7 @@ object PlatformSDK {
                     platformModule,
                     coreModule,
                     divkitModule,
+                    authFeatureModule,
                     productFeatureModule,
                 )
             }.direct

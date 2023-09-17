@@ -23,6 +23,7 @@ object ProjectModules {
 
     object Feature {
         private const val feature = ":feature"
+        const val auth = "$feature:auth-feature"
         const val product = "$feature:product-feature"
     }
 }

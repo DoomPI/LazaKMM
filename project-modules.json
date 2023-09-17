@@ -35,6 +35,11 @@
     "path": "common/umbrella-android"
   },
   {
+    "module": ":feature:auth-feature",
+    "alias": "authFeature",
+    "path": "feature/auth-feature"
+  },
+  {
     "module": ":feature:product-feature",
     "alias": "productFeature",
     "path": "feature/product-feature"
