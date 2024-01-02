@@ -2,6 +2,7 @@ plugins {
     `multiplatform-setup`
     `android-setup`
     kotlinSerialization
+    `kotlin-parcelize`
 }
 
 kotlin {
@@ -20,6 +21,7 @@ kotlin {
         commonMain {
             dependencies {
                 useModule(ProjectModules.Common.core)
+                useModule(ProjectModules.Common.navigation)
                 useModule(ProjectModules.Base.Divkit.domain)
                 useModule(ProjectModules.Base.Divkit.data)
                 useModule(ProjectModules.Base.Uikit.uikit)

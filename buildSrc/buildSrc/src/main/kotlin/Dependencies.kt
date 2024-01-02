@@ -21,7 +21,7 @@ object Dependencies {
     }
 
     object DivKit {
-        private const val version = "3.0.1"
+        private const val version = "28.2.0"
 
         const val div = "com.yandex.div:div:$version"
         const val core = "com.yandex.div:div-core:$version"

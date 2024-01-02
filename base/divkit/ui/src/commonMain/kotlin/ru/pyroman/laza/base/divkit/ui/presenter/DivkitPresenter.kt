@@ -2,12 +2,13 @@ package ru.pyroman.laza.base.divkit.ui.presenter
 
 import ru.pyroman.laza.base.divkit.ui.usecases.DivkitUseCases
 import ru.pyroman.laza.base.divkit.ui.view.DivkitMvpView
+import ru.pyroman.laza.base.divkit.ui.view.DivkitViewArgs
 import ru.pyroman.laza.base.uikit.presenter.BaseMvpPresenter
 import ru.pyroman.laza.common.core.di.Inject.instance
 
-abstract class BaseDivkitPresenter : BaseMvpPresenter<DivkitMvpView>() {
-
-    abstract val screenPath: String
+class DivkitPresenter(
+    private val viewArgs: DivkitViewArgs,
+) : BaseMvpPresenter<DivkitMvpView>() {
 
     private val useCases: DivkitUseCases = instance()
 
@@ -18,7 +19,7 @@ abstract class BaseDivkitPresenter : BaseMvpPresenter<DivkitMvpView>() {
 
         launch(
             block = {
-                useCases.getScreenData(screenPath)
+                useCases.getScreenData(viewArgs.path)
             },
             onSuccess = { screenData ->
                 view?.showScreen(screenData)

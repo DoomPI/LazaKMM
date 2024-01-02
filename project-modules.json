@@ -10,6 +10,11 @@
     "path": "common/core"
   },
   {
+    "module": ":common:navigation",
+    "alias": "commonNavigation",
+    "path": "common/navigation"
+  },
+  {
     "module": ":base:divkit:ui",
     "alias": "baseDivkitUi",
     "path": "base/divkit/ui"
@@ -33,15 +38,5 @@
     "module": ":common:umbrella-android",
     "alias": "umbrellaAndroid",
     "path": "common/umbrella-android"
-  },
-  {
-    "module": ":feature:auth-feature",
-    "alias": "authFeature",
-    "path": "feature/auth-feature"
-  },
-  {
-    "module": ":feature:product-feature",
-    "alias": "productFeature",
-    "path": "feature/product-feature"
   }
 ]

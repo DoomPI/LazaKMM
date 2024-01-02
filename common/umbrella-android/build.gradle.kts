@@ -10,9 +10,6 @@ kotlin {
                 useModule(ProjectModules.Common.core)
 
                 useModule(ProjectModules.Base.Divkit.ui)
-
-                useModule(ProjectModules.Feature.auth)
-                useModule(ProjectModules.Feature.product)
             }
         }
     }
