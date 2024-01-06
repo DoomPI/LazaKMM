@@ -1,6 +1,6 @@
 package ru.pyroman.laza.base.divkit.ui.presenter
 
-import ru.pyroman.laza.base.divkit.ui.view.DivkitViewArgs
+import ru.pyroman.laza.base.divkit.ui.view.args.DivkitViewArgs
 
 class DivkitPresenterFactory {
 

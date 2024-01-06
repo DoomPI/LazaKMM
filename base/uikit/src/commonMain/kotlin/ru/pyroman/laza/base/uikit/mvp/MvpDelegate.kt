@@ -1,17 +1,16 @@
 package ru.pyroman.laza.base.uikit.mvp
 
-class MvpDelegate<View : MvpView>(
-    view: View,
+class MvpDelegate<View : MvpView> private constructor(
+    private var view: View?,
     private val presenterProvider: () -> MvpPresenter<View>,
 ) {
 
-    private var view: View? = view
     private var presenter: MvpPresenter<View>? = null
     private var isAttached: Boolean = false
 
     fun onCreate() {
         if (presenter == null) {
-            presenter = presenterProvider.invoke()
+            presenter = presenterProvider()
         }
     }
 
@@ -34,5 +33,14 @@ class MvpDelegate<View : MvpView>(
 
     fun onDestroy() {
         presenter = null
+    }
+
+    companion object {
+        fun <View : MvpView> View.mvpDelegate(
+            presenterProvider: () -> MvpPresenter<View>
+        ) = MvpDelegate(
+            view = this,
+            presenterProvider = presenterProvider,
+        )
     }
 }

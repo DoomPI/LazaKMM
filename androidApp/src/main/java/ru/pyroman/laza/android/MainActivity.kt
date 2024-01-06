@@ -4,7 +4,7 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.add
 import androidx.fragment.app.commit
-import ru.pyroman.laza.base.divkit.ui.view.DivkitViewArgs
+import ru.pyroman.laza.base.divkit.ui.view.args.DivkitViewArgs
 import ru.pyroman.laza.base.divkit.ui.view.fragment.DivkitFragment
 
 class MainActivity : AppCompatActivity() {
@@ -12,19 +12,16 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        if (savedInstanceState == null) {
-            val args = DivkitViewArgs(
-                path = "product"
+        val args = DivkitViewArgs(
+            query = "product"
+        )
+
+        supportFragmentManager.commit {
+            setReorderingAllowed(true)
+            add<DivkitFragment>(
+                containerViewId = R.id.fragment_container,
+                args = DivkitFragment.withArgs(args)
             )
-
-            supportFragmentManager.commit {
-                setReorderingAllowed(true)
-                add<DivkitFragment>(
-                    containerViewId = R.id.fragment_container,
-                    args = DivkitFragment.withArgs(args)
-                )
-            }
         }
-
     }
 }

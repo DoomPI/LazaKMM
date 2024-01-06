@@ -1,6 +1,6 @@
 package ru.pyroman.laza.common.navigation
 
-interface Navigator {
+interface Router {
 
     fun navigateToView(viewArgs: ViewArgs)
 }
