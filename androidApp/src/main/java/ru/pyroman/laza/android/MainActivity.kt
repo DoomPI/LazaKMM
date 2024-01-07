@@ -4,7 +4,7 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.add
 import androidx.fragment.app.commit
-import ru.pyroman.laza.base.divkit.ui.view.args.DivkitViewArgs
+import ru.pyroman.laza.base.divkit.ui.view.args.AndroidDivkitViewArgs
 import ru.pyroman.laza.base.divkit.ui.view.fragment.DivkitFragment
 
 class MainActivity : AppCompatActivity() {
@@ -12,7 +12,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val args = DivkitViewArgs(
+        val args = AndroidDivkitViewArgs(
             query = "product"
         )
 

@@ -9,7 +9,7 @@ import ru.pyroman.laza.base.divkit.ui.databinding.FragmentDivkitBinding
 import ru.pyroman.laza.base.divkit.ui.divview.DivViewFactory
 import ru.pyroman.laza.base.divkit.ui.presenter.DivkitPresenterFactory
 import ru.pyroman.laza.base.divkit.ui.view.DivkitMvpView
-import ru.pyroman.laza.base.divkit.ui.view.args.DivkitViewArgs
+import ru.pyroman.laza.base.divkit.ui.view.args.AndroidDivkitViewArgs
 import ru.pyroman.laza.base.uikit.mvp.MvpDelegate.Companion.mvpDelegate
 import ru.pyroman.laza.base.uikit.mvp.MvpFragment
 import ru.pyroman.laza.base.uikit.utils.parcelableArg
@@ -31,7 +31,7 @@ class DivkitFragment : MvpFragment(), DivkitMvpView {
 
     private val divkitPresenterFactory: DivkitPresenterFactory = instance()
 
-    private val args by parcelableArg<DivkitViewArgs>(ARGUMENTS)
+    private val args by parcelableArg<AndroidDivkitViewArgs>(ARGUMENTS)
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -71,7 +71,7 @@ class DivkitFragment : MvpFragment(), DivkitMvpView {
     companion object {
         private const val ARGUMENTS = "arguments"
 
-        fun withArgs(viewArgs: DivkitViewArgs): Bundle {
+        fun withArgs(viewArgs: AndroidDivkitViewArgs): Bundle {
             return Bundle().apply {
                 putParcelable(ARGUMENTS, viewArgs)
             }
