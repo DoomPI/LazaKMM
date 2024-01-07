@@ -1,3 +1,16 @@
-PODFILE CHECKSUM: c704cc38a3d632ad261a61e65c347dd9f9f4188f
+PODS:
+  - base-divkit-ui (1.0)
+
+DEPENDENCIES:
+  - base-divkit-ui (from `../base/divkit/ui`)
+
+EXTERNAL SOURCES:
+  base-divkit-ui:
+    :path: "../base/divkit/ui"
+
+SPEC CHECKSUMS:
+  base-divkit-ui: 80c4484f30361c42769cd164897cfdfe12b813b0
+
+PODFILE CHECKSUM: 244cf51871a9808c0714db891147b6911224f76f
 
 COCOAPODS: 1.11.3

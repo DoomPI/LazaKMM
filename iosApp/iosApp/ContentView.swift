@@ -1,4 +1,5 @@
-import SwiftUI
+import SwiftUI;
+import BaseDivkitUi
 
 struct ContentView: View {
 

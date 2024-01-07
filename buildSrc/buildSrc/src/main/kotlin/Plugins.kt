@@ -4,5 +4,6 @@ object Plugins {
         const val version = "1.8.20"
 
         const val serialization = "plugin.serialization"
+        const val nativeCocoapods = "native.cocoapods"
     }
 }

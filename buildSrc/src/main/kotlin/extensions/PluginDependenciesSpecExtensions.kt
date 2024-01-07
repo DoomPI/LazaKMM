@@ -5,3 +5,6 @@ import org.gradle.plugin.use.PluginDependencySpec
 
 val PluginDependenciesSpec.kotlinSerialization: PluginDependencySpec
     get() = kotlin(Plugins.Kotlin.serialization) version Plugins.Kotlin.version
+
+val PluginDependenciesSpec.kotlinNativeCocoapods: PluginDependencySpec
+    get() = kotlin(Plugins.Kotlin.nativeCocoapods)

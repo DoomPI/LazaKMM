@@ -1,6 +1,6 @@
 import org.json.JSONArray
 
-val projectModules = JSONArray(File("project-modules.json").readText())
+val projectModules = JSONArray(File(rootDir, "project-modules.json").readText())
 for (index in 0 until projectModules.length()) {
     val jsonObject = projectModules.getJSONObject(index)
     val module = jsonObject.getString("module")
