@@ -22,7 +22,9 @@ open class CommonModuleSetupPlugin : Plugin<Project> {
 
 open class CommonModuleExtension(val project: Project) {
 
-    fun configureModule(moduleName: String) {
+    fun configureModule(name: String) {
+        val moduleName = "${name}Common"
+
         project.extensions.findByType<KotlinMultiplatformExtension>()?.run {
             listOf(
                 iosArm64(),

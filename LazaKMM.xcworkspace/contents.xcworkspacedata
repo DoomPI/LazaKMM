@@ -2,6 +2,18 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:base/divkit/data/BaseDivkitDataCommon">
+   </FileRef>
+   <FileRef
+      location = "group:base/divkit/domain/BaseDivkitDomainCommon">
+   </FileRef>
+   <FileRef
+      location = "group:base/divkit/ui/BaseDivkitUiCommon">
+   </FileRef>
+   <FileRef
+      location = "group:common/core/CommonCoreCommon">
+   </FileRef>
+   <FileRef
       location = "group:laza.xcodeproj">
    </FileRef>
 </Workspace>
