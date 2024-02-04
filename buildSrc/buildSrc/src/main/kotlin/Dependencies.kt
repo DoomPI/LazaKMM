@@ -5,7 +5,7 @@ object Dependencies {
     }
 
     object Kotlin {
-        private const val version = "1.8.20"
+        private const val version = "1.9.20"
 
         const val gradlePlugin = "org.jetbrains.kotlin:kotlin-gradle-plugin:$version"
 
@@ -66,6 +66,19 @@ object Dependencies {
                 private const val version = "1.5.7"
                 const val fragmentKtx = "androidx.fragment:fragment-ktx:$version"
             }
+        }
+    }
+
+    object Pyroman {
+
+        object MvpKmp {
+            private const val version = "1.0.0"
+            const val mvpKmp = "ru.pyroman.mvpkmp:mvpkmp:$version"
+        }
+
+        object KmpSwiftPackage {
+            private const val version = "1.0.0"
+            const val kmpSwiftPackage = "ru.pyroman.kmp-swiftpackage:kmp-swiftpackage:$version"
         }
     }
 }

@@ -1,8 +1,8 @@
 package ru.pyroman.laza.android
 
-import PlatformSDK
 import android.app.Application
-import ru.pyroman.laza.common.core.platform.PlatformConfiguration
+import ru.pyroman.laza.common.core.platform.AndroidPlatformConfiguration
+import ru.pyroman.laza.common.umbrella.platform.PlatformSDK
 
 class LazaApplication : Application() {
 
@@ -13,8 +13,8 @@ class LazaApplication : Application() {
 
 
     private fun initPlatformSdk() {
-        PlatformSDK.init(
-            configuration = PlatformConfiguration(applicationContext)
+        PlatformSDK.initPlatform(
+            configuration = AndroidPlatformConfiguration(applicationContext)
         )
     }
 }

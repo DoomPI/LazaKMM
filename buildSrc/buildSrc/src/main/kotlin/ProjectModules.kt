@@ -19,7 +19,7 @@ object ProjectModules {
         private const val common = ":common"
         const val core = "$common:core"
         const val navigation = "$common:navigation"
-        const val umbrellaAndroid = "$common:umbrella-android"
+        const val umbrella = "$common:umbrella"
     }
 
     object Feature {

@@ -4,6 +4,6 @@ import ru.pyroman.laza.common.core.di.module
 
 actual val divkitDataModule = module("divkitDataModule") {
     importAll(
-        divkitCommonDataModule
+        divkitDataCommonModule
     )
 }

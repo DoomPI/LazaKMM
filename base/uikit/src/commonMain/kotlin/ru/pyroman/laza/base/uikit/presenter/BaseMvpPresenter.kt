@@ -8,8 +8,8 @@ import kotlinx.coroutines.Job
 import kotlinx.coroutines.SupervisorJob
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
-import ru.pyroman.laza.base.uikit.mvp.MvpPresenter
-import ru.pyroman.laza.base.uikit.mvp.MvpView
+import ru.pyroman.mvpkmp.MvpPresenter
+import ru.pyroman.mvpkmp.MvpView
 import kotlin.coroutines.CoroutineContext
 
 open class BaseMvpPresenter<View : MvpView> : MvpPresenter<View>() {

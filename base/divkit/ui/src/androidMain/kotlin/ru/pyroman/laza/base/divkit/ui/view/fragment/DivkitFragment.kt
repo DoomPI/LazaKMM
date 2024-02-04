@@ -10,10 +10,10 @@ import ru.pyroman.laza.base.divkit.ui.divview.DivViewFactory
 import ru.pyroman.laza.base.divkit.ui.presenter.DivkitPresenterFactory
 import ru.pyroman.laza.base.divkit.ui.view.DivkitMvpView
 import ru.pyroman.laza.base.divkit.ui.view.args.AndroidDivkitViewArgs
-import ru.pyroman.laza.base.uikit.mvp.MvpDelegate.Companion.mvpDelegate
-import ru.pyroman.laza.base.uikit.mvp.MvpFragment
 import ru.pyroman.laza.base.uikit.utils.parcelableArg
 import ru.pyroman.laza.common.core.di.Inject.instance
+import ru.pyroman.mvpkmp.fragment.MvpFragment
+import ru.pyroman.mvpkmp.MvpDelegate.Companion.mvpDelegate
 
 class DivkitFragment : MvpFragment(), DivkitMvpView {
 

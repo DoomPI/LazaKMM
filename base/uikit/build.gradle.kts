@@ -15,6 +15,8 @@ kotlin {
         commonMain {
             dependencies {
                 useModule(ProjectModules.Common.core)
+
+                implementation(Dependencies.Pyroman.MvpKmp.mvpKmp)
             }
         }
     }

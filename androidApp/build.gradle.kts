@@ -28,9 +28,11 @@ dependencies {
     useCommonAndroidDataLibraries()
 
     useModule(ProjectModules.Common.core)
-    useModule(ProjectModules.Common.umbrellaAndroid)
+    useModule(ProjectModules.Common.umbrella)
 
     useModule(ProjectModules.Base.Divkit.ui)
     useModule(ProjectModules.Base.Divkit.domain)
     useModule(ProjectModules.Base.Uikit.uikit)
+
+    implementation(Dependencies.Pyroman.MvpKmp.mvpKmp)
 }

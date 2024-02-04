@@ -35,8 +35,8 @@
     "path": "base/uikit"
   },
   {
-    "module": ":common:umbrella-android",
-    "alias": "umbrellaAndroid",
-    "path": "common/umbrella-android"
+    "module": ":common:umbrella",
+    "alias": "umbrella",
+    "path": "common/umbrella"
   }
 ]

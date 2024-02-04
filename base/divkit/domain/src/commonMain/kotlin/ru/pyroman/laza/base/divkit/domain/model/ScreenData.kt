@@ -1,3 +1,5 @@
 package ru.pyroman.laza.base.divkit.domain.model
 
-expect class ScreenData
+class ScreenData(
+    val divData: DivData,
+)
