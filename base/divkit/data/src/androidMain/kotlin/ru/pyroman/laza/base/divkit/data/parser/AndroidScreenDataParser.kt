@@ -6,11 +6,11 @@ import com.yandex.div2.DivData
 import org.json.JSONObject
 import ru.pyroman.laza.base.divkit.domain.model.ScreenData
 
-actual class ScreenDataParser {
+class AndroidScreenDataParser : ScreenDataParser {
 
     private val environment = DivParsingEnvironment(ParsingErrorLogger.ASSERT)
 
-    actual fun parse(jsonString: String): ScreenData {
+    override fun parse(jsonString: String): ScreenData {
 
         val json = JSONObject(jsonString)
         val divan = with(json) {
