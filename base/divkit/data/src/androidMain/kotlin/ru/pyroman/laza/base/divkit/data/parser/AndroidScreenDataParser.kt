@@ -4,6 +4,7 @@ import com.yandex.div.data.DivParsingEnvironment
 import com.yandex.div.json.ParsingErrorLogger
 import com.yandex.div2.DivData
 import org.json.JSONObject
+import ru.pyroman.laza.base.divkit.domain.model.AndroidScreenData
 import ru.pyroman.laza.base.divkit.domain.model.ScreenData
 
 class AndroidScreenDataParser : ScreenDataParser {
@@ -22,7 +23,7 @@ class AndroidScreenDataParser : ScreenDataParser {
             environment.parseTemplates(templates)
         }
 
-        return ScreenData(
+        return AndroidScreenData(
             divData = DivData(environment, card)
         )
     }

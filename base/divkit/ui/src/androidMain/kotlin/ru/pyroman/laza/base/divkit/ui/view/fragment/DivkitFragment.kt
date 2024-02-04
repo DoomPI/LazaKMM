@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import ru.pyroman.laza.base.divkit.domain.model.androidScreenData
 import ru.pyroman.laza.base.divkit.domain.model.ScreenData
 import ru.pyroman.laza.base.divkit.ui.databinding.FragmentDivkitBinding
 import ru.pyroman.laza.base.divkit.ui.divview.DivViewFactory
@@ -48,7 +49,7 @@ class DivkitFragment : MvpFragment(), DivkitMvpView {
     }
 
     override fun showScreen(screenData: ScreenData) {
-        val divView = divViewFactory.create(screenData)
+        val divView = divViewFactory.create(screenData.androidScreenData)
 
         with(binding) {
             rootView.removeAllViews()

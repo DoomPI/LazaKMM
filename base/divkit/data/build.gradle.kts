@@ -2,6 +2,7 @@ plugins {
     `multiplatform-setup`
     `android-setup`
     kotlinSerialization
+    commonModuleSetup
 }
 
 kotlin {
@@ -22,4 +23,8 @@ kotlin {
             }
         }
     }
+}
+
+commonModuleSetup {
+    configureModule("BaseDivkitData")
 }

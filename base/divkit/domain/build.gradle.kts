@@ -1,6 +1,7 @@
 plugins {
     `multiplatform-setup`
     `android-setup`
+    commonModuleSetup
 }
 
 kotlin {
@@ -20,4 +21,8 @@ kotlin {
             }
         }
     }
+}
+
+commonModuleSetup {
+    configureModule("BaseDivkitDomain")
 }

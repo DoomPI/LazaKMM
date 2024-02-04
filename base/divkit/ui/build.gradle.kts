@@ -3,6 +3,7 @@ plugins {
     `android-setup`
     kotlinSerialization
     `kotlin-parcelize`
+    commonModuleSetup
 }
 
 kotlin {
@@ -30,4 +31,8 @@ kotlin {
             }
         }
     }
+}
+
+commonModuleSetup {
+    configureModule("BaseDivkitUi")
 }
